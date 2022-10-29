@@ -4,7 +4,7 @@ const getActivities = async (req, res) => {
     try {
         const activities = await Activity.findAll()
         if (activities) {
-            activities.filter(e => e.mane)
+            activities.filter(e => e.name)
             res.json(activities)
         } else {
             res.status(404).send("Activity not found")
